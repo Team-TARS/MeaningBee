@@ -7,3 +7,6 @@ def index(request):
 
 def login(request):
     return render(request, 'login.html')
+
+def choice(request):
+    return render(request, 'user_choice_screen.html')
