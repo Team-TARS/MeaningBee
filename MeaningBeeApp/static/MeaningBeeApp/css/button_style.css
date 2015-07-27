@@ -1,0 +1,32 @@
+﻿.btn-margin-10 {
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.btn-width-normal {
+    width:250px;
+}
+
+.btn-width-small {
+    width:150px;
+}
+
+.btn-default:hover {
+    background-color: rgb(254, 222, 44);
+    border-color: rgb(254, 222, 44);
+}
+
+.btn-default:focus {
+    background-color: rgb(254, 222, 44);
+    border-color: rgb(254, 222, 44);
+}
+
+.btn:focus {
+    outline:none;
+}
+
+.btn-color-default {
+    background-color: rgb(255, 239, 149);
+    border-color: rgb(255, 239, 149);
+}
+
