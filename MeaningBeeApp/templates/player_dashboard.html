@@ -1,0 +1,146 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/bootstrap.min.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/button_style.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/header_footer_theme.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/login_register_screen.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/player_dashboard_screen.css" %}">
+	</head>
+	<body>
+	
+		{#Header#}
+		<nav class="navbar navbar-inverse navbar-fixed-top header-theme">
+        	<div class="container-fluid">
+            	<div class="navbar-header">
+      				<a class="nav-title">Hi, Anthony!</a>
+    			</div>
+	   			<div>
+			      <ul class="nav-elements-justified">	    
+			        <li>Level: Wordmaster</li> 
+			      </ul>
+	    		</div>
+        	</div>
+    	</nav>
+    	
+    	{#First row#}
+   		<div class="row first-row row-margin-top">
+   			<div class="col-md-2 row-margin-top">
+   				<div class="align-inline">
+	       			<img src="{% static "MeaningBeeApp/images/anthony.jpg" %}" alt="Profile picture" class="profile-picture">
+	       		</div>
+	       	</div>
+       		<div class="col-md-3"> 
+   	            <div class="jumbotron jumbotron-property align-inline">
+				    <h2 class="player-name">Anthony</h2> 
+				    <h2 class="player-level color-blue">Level 7: Wordmaster</h2>
+				</div>
+	        </div>
+	        <div class="col-md-5">
+	            <div class="progress progress-margin-top">
+				    <div class="progress-bar progress-bar-custom" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+				      
+				    </div>
+				</div>	
+	        </div>
+	        <div class="col-md-2">
+	            	
+	        </div>
+	    </div>
+	    
+	   {#Second row#}
+   		<div class="row second-row">
+       		<div class="col-md-5"> 
+       		
+	        </div>
+	        <div class="col-md-2">
+	        	<div>
+	        		<div class="align-inline stats-font">Playing points:</div>
+	        		<div class="align-inline stats-font">2,000</div>
+	        	</div>
+	        	<div>
+		        	<div class="align-inline stats-font">Judging points:</div>
+		            <div class="align-inline stats-font">3,000</div> 	
+	        	</div>
+	          
+	        </div>
+	        <div class="col-md-3">
+	        	<div>
+	        		<div class="align-inline stats-font">Points until the next level:</div>
+	            	<div class="align-inline stats-font">2,000</div>
+	        	</div>
+	            <div>
+	        		<div class="align-inline stats-font">Points until the next level:</div>
+	            	<div class="align-inline stats-font">2,000</div>
+	        	</div>
+	        </div>
+	        <div class="col-md-2">
+	            	
+	        </div>
+	    </div>
+	    
+	    {#Third row#}
+   		<div class="row">
+   			<div class="col-md-2">
+   			
+   			</div>
+       		<div class="col-md-3">
+       			<div class="margin-left">
+	        		<div class="align-inline stats-font">Best Word: Strike (</div>
+	        		<div class="align-inline stats-font">7</div>
+	        		<div class="align-inline stats-font">definitions!)</div>
+	        	</div> 
+	        </div>
+	        <div class="col-md-7">
+	        	
+	        </div>
+	    </div>
+	    
+	    {#Fourth row#}
+   		<div class="row third-row stats-font">
+   			<div class="col-md-2 margin-left">
+   				<p>View pending objections</p>
+   			</div>
+       		<div class="col-md-3 stats-font">
+        		<div class="rounded-border">
+        			<p>Words that you don't know:</p>
+        			<p>Illuminate</p>
+        			<p>Ruminate</p>
+        			<p>Consecrate</p>
+        			<p class="see-all"><a href=""><i>See all</i></a></p>
+        		</div>
+	        </div>
+	        <div class="col-md-3 stats-font">
+	        	<div class="rounded-border">
+	        		<p>Number of words defined:</p>
+	        		<p class="count">21</p>
+	        	</div>
+	        </div> 
+	        <div class="col-md-3 stats-font">
+	        	<div class="rounded-border">
+	        		<p>Number of words judged:</p>
+	        		<p class="count">37</p>	
+	        	</div>
+	        	</div>
+	        <div class="col-md-1">
+	        	
+	        </div>
+	    </div>
+	    <div class="align-button-center">
+	    	<button type="button" class="btn btn-default btn-color-default btn-width-normal btn-margin-10">Back to Home</button>
+	    </div>
+	    
+	
+		{#Footer#}
+    	<nav class="navbar navbar-inverse navbar-fixed-bottom footer-theme">
+	        <div class="container-fluid">
+	            {#Things inside the bottom pane goes here#}
+	        </div>
+    	</nav>
+    	
+		<script src="{% static "MeaningBeeApp/js/jquery-1.10.2.min.js" %}" type="text/javascript"></script>
+		<script src="{% static "MeaningBeeApp/js/bootstrap.min.js" %}" type="text/javascript"></script> 
+	
+	</body>
+</html>

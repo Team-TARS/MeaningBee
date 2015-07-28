@@ -10,3 +10,6 @@ def login(request):
 
 def choice(request):
     return render(request, 'user_choice_screen.html')
+
+def dashboard(request):
+    return render(request, 'player_dashboard.html')
