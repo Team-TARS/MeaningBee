@@ -16,3 +16,6 @@ def dashboard(request):
 
 def loadgame(request):
     return render(request, 'load_game.html')
+
+def all_loaded(request):
+    return render(request,'all_loaded.html');

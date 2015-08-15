@@ -12,6 +12,11 @@
     margin-bottom:10px;
 }
 
+.btn-margin-30 {
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
 .btn-width-small {
 	width:150px;
 }
