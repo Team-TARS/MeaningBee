@@ -8,4 +8,5 @@ urlpatterns = patterns('',
      url(r'^login/', views.login, name='login'),
      url(r'^choice_screen/', views.choice, name='choice'),
      url(r'^player_dashboard/', views.dashboard, name='dashboard'),
+     url(r'^loading/', views.loadgame, name='loadgame'),
 )

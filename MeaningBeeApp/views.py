@@ -13,3 +13,6 @@ def choice(request):
 
 def dashboard(request):
     return render(request, 'player_dashboard.html')
+
+def loadgame(request):
+    return render(request, 'load_game.html')

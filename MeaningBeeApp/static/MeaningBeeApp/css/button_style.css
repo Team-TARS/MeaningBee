@@ -1,6 +1,19 @@
-﻿.btn-margin-10 {
+.btn-padding-3 {
+	padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+.btn-style-rounded {
+	border-radius:8px;
+}
+
+.btn-margin-10 {
     margin-top:10px;
     margin-bottom:10px;
+}
+
+.btn-width-small {
+	width:150px;
 }
 
 .btn-width-normal {
@@ -29,4 +42,6 @@
     background-color: rgb(255, 239, 149);
     border-color: rgb(255, 239, 149);
 }
+
+
 
