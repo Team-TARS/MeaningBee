@@ -1,0 +1,41 @@
+.row-padding {
+	padding:10px;
+}
+.enable-scroll {
+	overflow-y: scroll; 
+	height:450px;
+}
+
+.font-color-white {
+	color: rgba(72, 61, 139, 0)
+}
+
+.padding-top-75 {
+	padding-top: 75px;
+}
+
+.align-center {
+	text-align:center;
+}
+
+.objection-style {
+	border-color: rgb(255, 239, 149);
+	border-style: solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+}
+
+.display-inline {
+	display: inline-block;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    text-align:left;
+    margin-right:-4px;
+}

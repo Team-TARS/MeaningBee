@@ -19,3 +19,6 @@ def loadgame(request):
 
 def all_loaded(request):
     return render(request,'all_loaded.html');
+
+def pending_objections(request):
+    return render(request,'pending_objection.html')
