@@ -1,0 +1,19 @@
+.align-centre {
+	margin: auto;
+    padding-top:200px;
+    text-align:center;
+}
+
+.btn-color {
+	background-color: #37BBF1;
+}
+
+.btn-color:hover {
+	background-color: #14AEEC;
+}
+
+.btn-font-style {
+	font-size: x-large;
+    font-weight: 300;
+    letter-spacing: 1px;
+}

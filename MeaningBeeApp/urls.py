@@ -5,4 +5,10 @@ from . import views
 
 urlpatterns = patterns('',
      url(r'^$', views.index, name='index'),
+     url(r'^login/', views.login, name='login'),
+     url(r'^choice_screen/', views.choice, name='choice'),
+     url(r'^player_dashboard/', views.dashboard, name='dashboard'),
+     url(r'^loading/', views.loadgame, name='loadgame'),
+     url(r'^begin_game/', views.all_loaded, name='all_loaded'),
+     url(r'^objections/', views.pending_objections, name='pending_objections'),
 )

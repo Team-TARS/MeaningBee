@@ -1,0 +1,51 @@
+﻿{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+	    <link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/bootstrap.min.css" %}" />
+	    <link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/site.css" %}" />
+	    <link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/header_footer_theme.css" %}" />
+	    <link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/login_register_screen.css" %}" />
+	    <link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/button_style.css" %}" />
+	</head>
+	
+	<body>
+	    <nav class="navbar navbar-fixed-top header-theme">
+	        <div class="container-fluid">
+	            {#Things inside the top pane goes here#}
+	        </div>
+	    </nav>
+	
+	    <div class="container body-content">
+	        <div class="jumbotron text-center jumbotron-style">
+	            <h1>Meaning Bee</h1>
+	            <br />
+	
+	            <div>
+	                <button type="button" class="btn btn-default btn-color-default btn-width-normal btn-margin-10">Instructions</button>
+	            </div>
+	
+	            <div>
+	                <button type="button" class="btn btn-default btn-color-default btn-width-normal btn-margin-10">New Game</button>
+	            </div>
+	
+	            <div>
+	                <button type="button" class="btn btn-default btn-color-default btn-width-normal btn-margin-10">Account</button>
+	            </div>
+	
+	        </div>
+	    </div>
+	
+	
+	
+	    <nav class="navbar navbar-fixed-bottom footer-theme">
+	        <div class="container-fluid">
+	            {#Things inside the bottom pane goes here#}
+	        </div>
+	    </nav>
+	
+	    <script src="{% static "MeaningBeeApp/js/jquery-1.10.2.js" %}"></script>
+	    <script src="{% static "MeaningBeeApp/js/bootstrap.js" %}"></script>
+	    
+	</body>
+</html>

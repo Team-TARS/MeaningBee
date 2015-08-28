@@ -1,0 +1,52 @@
+.btn-padding-3 {
+	padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+.btn-style-rounded {
+	border-radius:8px;
+}
+
+.btn-margin-10 {
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.btn-margin-30 {
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.btn-width-small {
+	width:150px;
+}
+
+.btn-width-normal {
+    width:250px;
+}
+
+.btn-width-large {
+    width:350px;
+}
+
+.btn-default:hover {
+    background-color: rgb(254, 222, 44);
+    border-color: rgb(254, 222, 44);
+}
+
+.btn-default:focus {
+    background-color: rgb(254, 222, 44);
+    border-color: rgb(254, 222, 44);
+}
+
+.btn:focus {
+    outline:none;
+}
+
+.btn-color-default {
+    background-color: rgb(255, 239, 149);
+    border-color: rgb(255, 239, 149);
+}
+
+
+

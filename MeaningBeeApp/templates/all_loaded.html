@@ -5,32 +5,40 @@
 		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/bootstrap.min.css" %}">
 		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/button_style.css" %}">
 		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/header_footer_theme.css" %}">
-		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/login_register_screen.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/player_dashboard_screen.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/load_game.css" %}">		
 	</head>
 	<body>
+	
+		{#Header#}
 		<nav class="navbar navbar-inverse navbar-fixed-top header-theme">
         	<div class="container-fluid">
-            	{#Things inside the top pane goes here#}
+            	<div class="navbar-header">
+      				<a class="nav-title">Hi, Anthony!</a>
+    			</div>
+	   			<div>
+			      <ul class="nav-elements-justified">	    
+			        <li>Level: Wordmaster</li> 
+			        <li class="navbar-right">
+			        	<button type="button" class="btn btn-color btn-font-style btn-width-small btn-style-rounded btn-padding-3">Quit Game</button>
+			        </li>
+			      </ul>
+	    		</div>
         	</div>
     	</nav>
-	
-		<div class="jumbotron text-center jumbotron-style">
-        	<h1>Meaning Bee</h1> 
-        	<br />
-	        <div>
-	            <button type="button" class="btn btn-default btn-color-default btn-width-normal btn-margin-10">Login</button>
-	        </div>
-	        <div>
-            	<button type="button" class="btn btn-default btn-color-default btn-width-normal btn-margin-10">Register</button>
-        	</div>        
-    	</div>
     	
+    	<div class="align-centre">
+		    <h1>All loaded! Ready to play?</h1>
+		    <button type="button" class="btn btn-default btn-color-default btn-width-small btn-margin-30">Let's go!</button>
+		</div>
+    	
+    	{#Footer#}
     	<nav class="navbar navbar-inverse navbar-fixed-bottom footer-theme">
 	        <div class="container-fluid">
 	            {#Things inside the bottom pane goes here#}
 	        </div>
     	</nav>
-		<script src="{% static "MeaningBeeApp/js/main.js" %}" type="text/javascript"></script> 
+    	
 		<script src="{% static "MeaningBeeApp/js/jquery-1.10.2.min.js" %}" type="text/javascript"></script>
 		<script src="{% static "MeaningBeeApp/js/bootstrap.min.js" %}" type="text/javascript"></script> 
 	
