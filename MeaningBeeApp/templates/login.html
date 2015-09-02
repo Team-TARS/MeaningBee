@@ -1,5 +1,5 @@
 ﻿{% load staticfiles %}
-<!DOCTYPE html>
+
 <html>
 	<head>
 	    <link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/bootstrap.min.css" %}" />
@@ -7,6 +7,9 @@
 	    <link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/header_footer_theme.css" %}" />
 	    <link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/login_screen.css" %}" />
 	    <link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/button_style.css" %}" />
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script src="{% static "MeaningBeeApp/js/main.js" %}"></script>
+	    
 	</head>
 	
 	<body>
@@ -21,22 +24,26 @@
 	            <h2>Meaning Bee</h2>
 	        </div>
 	        
+	        <form action="create_post" method="POST" id="login-form"> 
+	        {% csrf_token %}
 	        <div class="rounded-border div-center">
 	            <div class="form-group">
 	                <label for="usr">User Name:</label>
-	                <input type="text" class="form-control input-text-color" id="usr">
+	                <input type="text" class="form-control input-text-color" id="username">
 	            </div>
 	            <div class="form-group">
 	                <label for="pwd">Password:</label>
-	                <input type="password" class="form-control input-text-color" id="pwd">
+	                <input type="password" class="form-control input-text-color" id="password">
 	            </div>
 	        </div>
 	
 	        <div class="row" style="margin-top:20px">
 	            <div class="col-md-12 text-center">
-	                <button type="button" class="btn btn-default btn-color-default btn-width-small btn-margin-10">Login</button>
+	                <button type="submit" value="ok" class="btn btn-default btn-color-default btn-width-small btn-margin-10">Login</button>
 	            </div>
 	        </div>
+	        
+	        </form>
 	    </div>
 	            
 	          

@@ -6,6 +6,8 @@ from . import views
 urlpatterns = patterns('',
      url(r'^$', views.index, name='index'),
      url(r'^login/', views.login, name='login'),
+     url(r'^create_post/', views.create_post, name='create_post'),
+     url(r'^login_action/', views.login_action, name='login'),
      url(r'^choice_screen/', views.choice, name='choice'),
      url(r'^player_dashboard/', views.dashboard, name='dashboard'),
      url(r'^loading/', views.loadgame, name='loadgame'),
