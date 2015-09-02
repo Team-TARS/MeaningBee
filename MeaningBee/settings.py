@@ -79,9 +79,9 @@ WSGI_APPLICATION = 'MeaningBee.wsgi.application'
 DATABASES = {
      'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myprojectdb',
-        'USER': 'aishwarya',
-        'PASSWORD': 'aishwarya',
+        'NAME': 'meaningbeedb',
+        'USER': 'meaningbeeuser',
+        'PASSWORD': 'meaningbee',
         'HOST': 'localhost',
         'PORT': ''
     }
