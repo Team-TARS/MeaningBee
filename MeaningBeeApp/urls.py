@@ -13,6 +13,7 @@ urlpatterns = patterns('',
      url(r'^loading/', views.loadgame, name='loadgame'),
      url(r'^begin_game/', views.all_loaded, name='all_loaded'),
      url(r'^objections/', views.pending_objections, name='pending_objections'),
+     url(r'^registration/', views.registration, name='registration'),
 )
 
 
