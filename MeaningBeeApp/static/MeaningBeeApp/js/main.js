@@ -59,6 +59,11 @@ $(document).ready(function() {
 		            $('#post-text').val(''); // remove the value from the input
 		            console.log(json); // log the returned json to the console
 		            console.log("success"); // another sanity check
+		            if(json['result']==='success') {
+		            	alert("user authenticated");
+		            } else {
+		            	alert("authentication failure");
+		            }
 		        },
 		
 		        // handle a non-successful response
