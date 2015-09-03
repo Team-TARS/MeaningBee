@@ -6,12 +6,14 @@
 }
 
 .rounded-border {
+	position:relative;
     border-radius: 20px;
     border: 2px solid rgb(254, 222, 44);
-    padding: 20px; 
+    padding: 15px;
+    padding-bottom: 10px; 
     padding-left:55px;
     width: 400px;
-    height: 190px; 
+    height: auto; 
 }
 
 .div-center {
@@ -30,4 +32,9 @@
 
 .form-control {
     border-radius:15px;
+}
+
+.validation_error {
+	font-weight: normal;
+	color:#F00;
 }

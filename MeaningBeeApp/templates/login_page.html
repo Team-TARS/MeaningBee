@@ -27,14 +27,16 @@
 	        
 	        <form action="create_post" method="POST" id="login-form"> 
 	        {% csrf_token %}
-	        <div class="rounded-border div-center">
+	        <div class="rounded-border div-center" id="border_div">
 	            <div class="form-group">
 	                <label for="usr">User Name:</label>
 	                <input type="text" class="form-control input-text-color" id="username">
+	                <label id="username_label" class="validation_error"></label>
 	            </div>
 	            <div class="form-group">
 	                <label for="pwd">Password:</label>
 	                <input type="password" class="form-control input-text-color" id="password">
+	                <label id="password_label" class="validation_error"></label>
 	            </div>
 	        </div>
 	
