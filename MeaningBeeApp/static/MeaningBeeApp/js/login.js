@@ -88,8 +88,8 @@ $(document).ready(function() {
 		            	alert("user authenticated");
 		            } else {
 		            	alert("authentication failure");
-		            }
-		        },
+		            } 
+		        }, 
 		
 		        // handle a non-successful response
 		        error : function(xhr,errmsg,err) {
