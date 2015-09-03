@@ -8,6 +8,7 @@ urlpatterns = patterns('',
      url(r'^login/', views.login, name='login'),
      url(r'^create_post/', views.create_post, name='create_post'),
      url(r'^login_action/', views.login_action, name='login'),
+     url(r'^register_action/', views.register_action, name='register'),
      url(r'^choice_screen/', views.choice, name='choice'),
      url(r'^player_dashboard/', views.dashboard, name='dashboard'),
      url(r'^loading/', views.loadgame, name='loadgame'),
@@ -15,6 +16,6 @@ urlpatterns = patterns('',
      url(r'^objections/', views.pending_objections, name='pending_objections'),
      url(r'^registration/', views.registration, name='registration'),
 )
-
+ 
 
 

@@ -17,12 +17,12 @@
 		<div class="jumbotron text-center jumbotron-style">
         	<h1>Meaning Bee</h1> 
         	<br />
-	        <div>
-	            <button type="button" class="btn btn-default btn-color-default btn-width-normal btn-margin-10">Login</button>
-	        </div>
-	        <div>
-            	<button type="button" class="btn btn-default btn-color-default btn-width-normal btn-margin-10">Register</button>
-        	</div>        
+        		<div>
+	            <button type="button" id="user_login_button" class="btn btn-default btn-color-default btn-width-normal btn-margin-10">Login</button>
+		        </div>
+		        <div>
+	            	<button type="button" id="user_register_button" formaction="registration_page" class="btn btn-default btn-color-default btn-width-normal btn-margin-10">Register</button>
+	        	</div>    
     	</div>
     	
     	<nav class="navbar navbar-inverse navbar-fixed-bottom footer-theme">
@@ -30,8 +30,10 @@
 	            {#Things inside the bottom pane goes here#}
 	        </div>
     	</nav>
-		<script src="{% static "MeaningBeeApp/js/main.js" %}" type="text/javascript"></script> 
-		<script src="{% static "MeaningBeeApp/js/jquery-1.10.2.min.js" %}" type="text/javascript"></script>
+    	<script src="{% static "MeaningBeeApp/js/jquery-1.10.2.min.js" %}" type="text/javascript"></script>
+    	<script src="{% static "MeaningBeeApp/js/urlString.js" %}"></script>
+		<script src="{% static "MeaningBeeApp/js/registration.js" %}" type="text/javascript"></script> 
+		<script src="{% static "MeaningBeeApp/js/login.js" %}"></script>
 		<script src="{% static "MeaningBeeApp/js/bootstrap.min.js" %}" type="text/javascript"></script> 
 	
 	</body>
