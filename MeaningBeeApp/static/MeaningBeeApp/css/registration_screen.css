@@ -1,17 +1,19 @@
 .jumbotron-style {
-    margin-top:0px;
+    margin-top:-3px;
+    margin-bottom:3px;
     background-color:white;
     padding-top:0px;
     padding-bottom:0px;
 }
 
 .rounded-border {
+	position: relative;
     border-radius: 20px;
     border: 2px solid rgb(254, 222, 44);
-    padding: 20px; 
+    padding: 10px; 
     padding-left:55px;
     width: 400px;
-    height: 410px; 
+    height: auto; 
 }
 
 .div-center {
@@ -29,5 +31,14 @@
 }
 
 .form-control {
-    border-radius:15px;
+    border-radius:15px;    
+}
+
+.validation_error {
+	font-weight: normal;
+	color:#F00;
+}
+
+.zero-margin {
+	margin-bottom:0px;
 }

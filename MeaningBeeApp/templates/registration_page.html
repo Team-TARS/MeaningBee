@@ -28,29 +28,34 @@
 	        <form action="" method="POST" id="registration-form"> 
 	        {% csrf_token %}
 	        <div class="rounded-border div-center">
-	        	<div class="form-group">
+	        	<div class="form-group zero-margin">
 	                <label for="usr">First Name:</label>
 	                <input type="text" class="form-control input-text-color" id="firstname">
+	                <label id="firstname_label" class="validation_error"> </label>
 	            </div>
-	            <div class="form-group">
+	            <div class="form-group zero-margin">
 	                <label for="usr">Last Name:</label>
 	                <input type="text" class="form-control input-text-color" id="lastname">
+	                <label id="lastname_label" class="validation_error"></label>
 	            </div>
-	            <div class="form-group">
+	            <div class="form-group zero-margin">
 	                <label for="usr">Date of birth:</label>
 	                <input type="text" class="form-control input-text-color" id="dateofbirth">
+	                <label id="dob_label" class="validation_error"></label>
 	            </div>
-	            <div class="form-group">
+	            <div class="form-group zero-margin">
 	                <label for="usr">User Name:</label>
 	                <input type="text" class="form-control input-text-color" id="username">
+	                <label id="username_label" class="validation_error"></label>
 	            </div>
-	            <div class="form-group">
+	            <div class="form-group zero-margin">
 	                <label for="pwd">Password:</label>
 	                <input type="password" class="form-control input-text-color" id="password">
+	                <label id="password_label" class="validation_error"></label>
 	            </div>
 	        </div>
 	
-	        <div class="row" style="margin-top:20px">
+	        <div class="row" style="margin-top:10px;">
 	            <div class="col-md-12 text-center">
 	                <button type="submit" value="ok" class="btn btn-default btn-color-default btn-width-small btn-margin-10">Register</button>
 	            </div>
