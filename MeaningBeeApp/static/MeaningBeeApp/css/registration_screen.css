@@ -1,44 +1,57 @@
 .jumbotron-style {
-    margin-top:-3px;
-    margin-bottom:3px;
-    background-color:white;
-    padding-top:0px;
-    padding-bottom:0px;
+	margin-top: -3px;
+	margin-bottom: 3px;
+	background-color: white;
+	padding-top: 0px;
+	padding-bottom: 0px;
 }
 
 .rounded-border {
 	position: relative;
-    border-radius: 20px;
-    border: 2px solid rgb(254, 222, 44);
-    padding: 10px; 
-    padding-left:55px;
-    width: 400px;
-    height: auto; 
+	border-radius: 20px;
+	border: 2px solid rgb(254, 222, 44);
+	padding: 10px;
+	padding-left: 55px;
+	width: 400px;
+	height: auto;
 }
 
 .div-center {
-    margin:0 auto;
+	margin: 0 auto;
 }
 
 .input-text-color {
-    border: 1px solid rgb(255, 245, 192);
-    background-color: rgb(255, 245, 192);
+	border: 1px solid rgb(255, 245, 192);
+	background-color: rgb(255, 245, 192);
 }
 
 .form-control:focus {
-  border-color: rgb(254, 222, 44);
-  box-shadow: inset 0 1px 1px rgb(254, 222, 44), 0 0 8px rgb(254, 222, 44);
+	border-color: rgb(254, 222, 44);
+	box-shadow: inset 0 1px 1px rgb(254, 222, 44), 0 0 8px rgb(254, 222, 44);
 }
 
 .form-control {
-    border-radius:15px;    
+	border-radius: 15px;
 }
 
 .validation_error {
 	font-weight: normal;
-	color:#F00;
+	color: #F00;
 }
 
 .zero-margin {
-	margin-bottom:0px;
+	margin-bottom: 0px;
+}
+
+div.datepick {
+	font-size: 18.5px !important;
+	width: 100% !important;
+}
+
+.datepick-nav, .datepick-ctrl {
+	background-color: #000 !important;
+}
+
+.datepick-month-header, .datepick-month-header select, .datepick-month-header input {
+	background-color: #000 !important;
 }

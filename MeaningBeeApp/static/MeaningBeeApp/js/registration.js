@@ -11,6 +11,9 @@ $(document).ready(function() {
 	    register_user_post();
 	});
 	
+	
+	$('#dateofbirth').datepick();
+	
 	function clearValidationErrors() {
 		document.getElementById('firstname_label').innerHTML = '';
 	    document.getElementById('lastname_label').innerHTML = '';
@@ -57,7 +60,7 @@ $(document).ready(function() {
 		else {
 			return true;
 		}
-	}
+	}	
 	
 	function register_user_post() {
 		
