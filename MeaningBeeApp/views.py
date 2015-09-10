@@ -8,7 +8,11 @@ from django.http import HttpResponse
 from MeaningBeeApp.models import Feedback
 from datetime import datetime
 from django.contrib.auth.models import User
-import json   
+from MeaningBeeApp.models import UserProfile
+import json 
+import time
+from datetime import datetime
+
 # Create your views here.
 
 def index(request):
@@ -49,10 +53,21 @@ def register_action(request):
         user_name = received_json_data['username'] 
         password = received_json_data['password']                                                                                           
         response_data = {}
-        user, created = User.objects.get_or_create(username=user_name)
-        user.set_password(password)
-        user.save()
-        response_data['result'] = 'success' 
+        try:
+            userobj = User.objects.get(username=user_name)
+            response_data['result'] = 'user exists' 
+        
+        except User.DoesNotExist:        
+            user, created = User.objects.get_or_create(username=user_name)
+            user.set_password(password)
+            user.first_name = first_name
+            user.last_name = last_name
+            user.save()
+            print (user.first_name)
+            strp_time = time.strptime(date_of_birth, "%m/%d/%Y")
+            date_django = datetime.fromtimestamp(time.mktime(strp_time))
+            user_details = UserProfile.objects.get_or_create(user=user,date_of_birth=date_django)    
+            response_data['result'] = 'success' 
     
     return HttpResponse(
         json.dumps(response_data),

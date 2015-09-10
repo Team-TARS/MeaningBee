@@ -7,7 +7,7 @@ $(document).ready(function() {
 	});
 	
 	
-	//$('#dateofbirth').datepick();
+	$('#dateofbirth').datepick();
 	
 	function clearValidationErrors() {
 		document.getElementById('firstname_label').innerHTML = '';
@@ -99,7 +99,12 @@ $(document).ready(function() {
 		            console.log("success"); // another sanity check
 		            if(json['result']==='success') {
 		            	alert("user registered!");
-		            } else {
+		            	window.location.href = urlString + "/login/";
+		            }
+		            else if(json['result']==='user exists') {
+		            	document.getElementById('username_label').innerHTML = 'Username already exists!';
+		            }
+		            else {
 		            	alert("registration failure!");
 		            }
 		        },
