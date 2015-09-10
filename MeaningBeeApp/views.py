@@ -5,10 +5,9 @@ from django.template import Context, RequestContext
 from django.shortcuts import render_to_response
 from django.shortcuts import render
 from django.http import HttpResponse
-from MeaningBeeApp.models import Feedback
 from datetime import datetime
 from django.contrib.auth.models import User
-from MeaningBeeApp.models import UserProfile
+from MeaningBeeApp.models import UserProfile,UserType
 import json 
 import time
 from datetime import datetime
@@ -66,7 +65,13 @@ def register_action(request):
             print (user.first_name)
             strp_time = time.strptime(date_of_birth, "%m/%d/%Y")
             date_django = datetime.fromtimestamp(time.mktime(strp_time))
-            user_details = UserProfile.objects.get_or_create(user=user,date_of_birth=date_django)    
+
+            # Always have var,created while using get_or_create  - important
+            user_type, created = UserType.objects.get_or_create(usertype_name=UserType.PLAYER)
+
+            #print(d.usertype_name)
+            #user_type.get_usertype_name_display()
+            user_details = UserProfile.objects.get_or_create(user=user,date_of_birth=date_django,usertype=user_type)    
             response_data['result'] = 'success' 
     
     return HttpResponse(
@@ -96,28 +101,28 @@ def login_action(request):
         content_type="application/json"
     )
 
-@csrf_exempt
-def create_post(request):
-    print request.body
-    if request.method == 'POST' and request.is_ajax():
-        received_json_data=json.loads(request.body)
-        print received_json_data
-        username = received_json_data['username'] 
-        password = received_json_data['password']   
-        response_data = {}
-        feedback = Feedback(username=username, password=password, date=datetime.now())
-        feedback.save()
+# @csrf_exempt
+# def create_post(request):
+#     print request.body
+#     if request.method == 'POST' and request.is_ajax():
+#         received_json_data=json.loads(request.body)
+#         print received_json_data
+#         username = received_json_data['username'] 
+#         password = received_json_data['password']   
+#         response_data = {}
+#         feedback = Feedback(username=username, password=password, date=datetime.now())
+#         feedback.save()
         
-        response_data['result'] = 'Create post successful!'
-        response_data['text'] = username
+#         response_data['result'] = 'Create post successful!'
+#         response_data['text'] = username
 
 
-        return HttpResponse(
-            json.dumps(response_data),
-            content_type="application/json"
-        )
-    else:
-        return HttpResponse(
-            json.dumps({"nothing to see": "this isn't happening"}),
-            content_type="application/json"
-        )
+#         return HttpResponse(
+#             json.dumps(response_data),
+#             content_type="application/json"
+#         )
+#     else:
+#         return HttpResponse(
+#             json.dumps({"nothing to see": "this isn't happening"}),
+#             content_type="application/json"
+#         )
