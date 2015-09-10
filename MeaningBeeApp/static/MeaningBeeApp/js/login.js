@@ -1,9 +1,5 @@
 $(document).ready(function() {
 	
-	$('#user_login_button').on('click' , function(event) {
-		window.location.href = urlString + "/login/";
-	});
-	
 	$('#login-form').on('submit', function(event){
 	    event.preventDefault(); //to prevent it from getting refreshed
 	    console.log("login form submitted!");  // check whether its coming in.

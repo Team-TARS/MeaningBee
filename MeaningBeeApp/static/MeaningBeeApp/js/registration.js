@@ -1,9 +1,4 @@
 $(document).ready(function() { 
-
-	$('#user_register_button').on('click' , function(event) {
-		event.preventDefault(); //to prevent it from getting refreshed	
-		window.location.href = urlString + "/registration/";
-	});
 	
 	$('#registration-form').on('submit', function(event){
 	    event.preventDefault(); //to prevent it from getting refreshed
@@ -12,7 +7,7 @@ $(document).ready(function() {
 	});
 	
 	
-	$('#dateofbirth').datepick();
+	//$('#dateofbirth').datepick();
 	
 	function clearValidationErrors() {
 		document.getElementById('firstname_label').innerHTML = '';
