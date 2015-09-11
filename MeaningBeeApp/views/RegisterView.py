@@ -12,8 +12,9 @@ import json
 import time
 from datetime import datetime
 
-# Create your views here.
-
+# View for registering users
+# Once the data is all obtained from front end (post validation)
+# UserProfile - Custom user with DOB and Type fields added to User
 @csrf_exempt
 def register_action(request):
     response_data = {}
@@ -30,20 +31,22 @@ def register_action(request):
         response_data = {}
         try:
             userobj = User.objects.get(username=user_name)
-            response_data['result'] = 'user exists' 
+            response_data['result'] = 'user exists' #User with the same name exists
         
         except User.DoesNotExist:        
             user, created = User.objects.get_or_create(username=user_name)
             user.set_password(password)
             user.first_name = first_name
             user.last_name = last_name
-            user.save()
+            user.save() #Save it in the user table first
             print (user.first_name)
             strp_time = time.strptime(date_of_birth, "%m/%d/%Y")
-            date_django = datetime.fromtimestamp(time.mktime(strp_time))
+            date_django = datetime.fromtimestamp(time.mktime(strp_time)) 
+            #Fetch DOB and convert it into Django DateTimeField
 
             # Always have var,created while using get_or_create  - important
             user_type, created = UserType.objects.get_or_create(usertype_name=UserType.PLAYER)
+            # For the first run of the app - This must create the entry 'PLAYER' in the DB
 
             #print(d.usertype_name)
             #user_type.get_usertype_name_display()

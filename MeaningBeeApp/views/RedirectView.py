@@ -13,6 +13,8 @@ import time
 from datetime import datetime
 
 # Create your views here.
+# Contains all redirection on hitting enter - 
+# TODO - handle each and remove later
 
 def index(request):
     return render(request, 'index.html');

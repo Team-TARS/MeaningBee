@@ -5,6 +5,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import json 
 
+# View for login authentication checking
+# username and password are sent through ajax calls 
+# verified if they exist
 @csrf_exempt
 def login_action(request):  
     response_data = {}
@@ -12,9 +15,13 @@ def login_action(request):
     print request.body   
     if request.method == 'POST' and request.is_ajax():
         received_json_data=json.loads(request.body)
+        # the json data that is sent from the front end 
         print received_json_data
-        username = received_json_data['username'] 
-        password = received_json_data['password']                                                                                           
+        # extract the username from the json data
+        username = received_json_data['username']
+        # extract the password from the json data 
+        password = received_json_data['password']
+        # authenticate the user and password                                                                                           
         if request.method == 'POST':                                                                                                            
             request.session.set_test_cookie()                                                                                                     
             user =  authenticate(username=username, password=password)
