@@ -44,6 +44,7 @@ $(document).ready(function() {
 	
 	function create_post() { //to send post
 
+		$('#login_label').html('');
 		var csrftoken = getCookie('csrftoken'); // to get the csrf token - django 1.7 doc
 
 		var usernameValue = $('#username').val(); //user name value
@@ -81,9 +82,11 @@ $(document).ready(function() {
 		            console.log(json); // log the returned json to the console
 		            console.log("success"); // another sanity check
 		            if(json['result']==='success') {
-		            	alert("user authenticated");
+		            	//alert("user authenticated");
+		            	window.location.href = urlString + "/choice_screen/";
 		            } else {
-		            	alert("authentication failure");
+		            	//alert("authentication failure");
+		            	$('#login_label').html('Username/password do not match!');
 		            } 
 		        }, 
 		

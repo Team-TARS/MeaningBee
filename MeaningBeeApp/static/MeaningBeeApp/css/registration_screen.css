@@ -38,7 +38,10 @@
 	font-weight: normal;
 	color: #F00;
 }
-
+.success {
+	font-weight: normal;
+	color: #006600;
+}
 .zero-margin {
 	margin-bottom: 0px;
 }
@@ -54,4 +57,14 @@ div.datepick {
 
 .datepick-month-header, .datepick-month-header select, .datepick-month-header input {
 	background-color: #000 !important;
+}
+.hidden {
+	display:none;
+}
+.show {
+	display: block;
+}
+
+.showinline {
+	display: inline-block;
 }

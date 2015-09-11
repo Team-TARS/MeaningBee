@@ -5,9 +5,24 @@ $(document).ready(function() {
 	    clearValidationErrors();
 	    register_user_post();
 	});
+
+	$('#login_redirect').on('click',function(event) {
+		window.location.href = urlString + "/login/";
+	});
 	
 	
-	$('#dateofbirth').datepick();
+	//$('#dateofbirth').datepick();
+	var newMaxDate = new Date();
+	newMaxDate.setFullYear(newMaxDate.getFullYear() - 8 );
+	newMaxDate.setDate(1);
+	newMaxDate.setMonth(0);
+	
+
+	var newMinDate = new Date();
+	newMinDate.setFullYear(newMinDate.getFullYear() - 20 );
+	newMinDate.setDate(1);
+	newMinDate.setMonth(0);
+	$("#dateofbirth").datepick({ maxDate: newMaxDate, minDate: newMinDate});
 	
 	function clearValidationErrors() {
 		document.getElementById('firstname_label').innerHTML = '';
@@ -15,6 +30,7 @@ $(document).ready(function() {
 	    document.getElementById('dob_label').innerHTML = '';
 	    document.getElementById('username_label').innerHTML = '';
 	    document.getElementById('password_label').innerHTML = '';
+	    document.getElementById('registration_label').innerHTML = '';
 	}
 	
 	function getCookie(name) {
@@ -98,14 +114,22 @@ $(document).ready(function() {
 		            console.log(json); // log the returned json to the console
 		            console.log("success"); // another sanity check
 		            if(json['result']==='success') {
-		            	alert("user registered!");
-		            	window.location.href = urlString + "/login/";
+		            	//alert("user registered!");
+		            	$('#registration_success_label').html("User registered");
+		            	$('#register').removeClass('showinline');
+		            	$('#register').addClass('hidden');
+
+		            	//$('#login_redirect').show();
+		            	$('#login_redirect').removeClass('hidden');
+		            	$('#login_redirect').addClass('showinline');
+		            	//window.location.href = urlString + "/login/";
 		            }
 		            else if(json['result']==='user exists') {
-		            	document.getElementById('username_label').innerHTML = 'Username already exists!';
+		            	$('#username_label').html('Username already exists!');
 		            }
 		            else {
 		            	alert("registration failure!");
+		            	$('#registration_label').html("Registration failed. Provide different credentials or please try again later");
 		            }
 		        },
 		
