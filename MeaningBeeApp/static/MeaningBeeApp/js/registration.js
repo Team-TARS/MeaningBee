@@ -22,6 +22,9 @@ $(document).ready(function() {
 	newMinDate.setFullYear(newMinDate.getFullYear() - 20 );
 	newMinDate.setDate(1);
 	newMinDate.setMonth(0);
+
+	//Players between 8 to 20 years can play
+	
 	$("#dateofbirth").datepick({ maxDate: newMaxDate, minDate: newMinDate});
 	
 	function clearValidationErrors() {

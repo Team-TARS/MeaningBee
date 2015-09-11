@@ -17,3 +17,21 @@
     font-weight: 300;
     letter-spacing: 1px;
 }
+
+.hide {
+	display: none;
+}
+
+.show {
+	display:block;
+}
+.left {
+	float:left;
+}
+.clearBoth {
+	clear:both;
+}
+.marginLeftTop {
+	margin-left: 1%;
+    margin-top: 8%;
+}

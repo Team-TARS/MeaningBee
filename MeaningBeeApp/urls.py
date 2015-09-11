@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from MeaningBeeApp.views import LoginView
 from MeaningBeeApp.views import RedirectView
 from MeaningBeeApp.views import RegisterView
+from MeaningBeeApp.views import FetchWordView
 
 
 urlpatterns = patterns('',
@@ -17,6 +18,8 @@ urlpatterns = patterns('',
      url(r'^begin_game/', RedirectView.all_loaded, name='all_loaded'),
      url(r'^objections/', RedirectView.pending_objections, name='pending_objections'),
      url(r'^registration/', RedirectView.registration, name='registration'),
+     url(r'^fetch_word/', FetchWordView.fetch_random_word, name='fetch_word'),
+     
 )
  
 
