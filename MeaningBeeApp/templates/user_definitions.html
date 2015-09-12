@@ -3,10 +3,15 @@
 <html>
 	<head>
 		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/bootstrap.min.css" %}">
+
+
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">	
+
 		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/button_style.css" %}">
 		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/header_footer_theme.css" %}">
 		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/player_dashboard_screen.css" %}">
-		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/load_game.css" %}">		
+		<link rel="stylesheet" type="text/css" href="{% static "MeaningBeeApp/css/user_definitions.css" %}">
+	
 	</head>
 	<body>
 
@@ -34,9 +39,17 @@
 		</div>
 		
 
-    	<div class="align-centre">
-		    <h1 id="displayWord">All loaded! Ready to play?</h1>
-		    <button type="button" id="playerReady" class="btn btn-default btn-color-default btn-width-small btn-margin-30">Let's go!</button>
+    	<div class="align-centre div-width-600">
+		    <h2 id="displayWord">Word to be displayed!</h2>
+		    <div id="answer-container" class="div-container enable-scroll">
+		    		    	
+		    </div>
+
+		    <div>
+  				<textarea placeholder="Type your definition here..." class="form-control" rows="5" id="comment"></textarea>
+		    </div>
+
+		    <button type="button" id="continue" class="btn btn-default btn-color-default btn-width-small btn-margin-30">Continue</button>
 		</div>
     	
     	{#Footer#}
@@ -47,8 +60,10 @@
     	</nav>
     	
 		<script src="{% static "MeaningBeeApp/js/jquery-1.10.2.min.js" %}" type="text/javascript"></script>
-		<script src="{% static "MeaningBeeApp/js/bootstrap.min.js" %}" type="text/javascript"></script> 
+		/*<script src="{% static "MeaningBeeApp/js/bootstrap.min.js" %}" type="text/javascript"></script> */
+		 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script src="{% static "MeaningBeeApp/js/urlString.js" %}" type="text/javascript"></script> 
-		<script src="{% static "MeaningBeeApp/js/allLoaded.js" %}" type="text/javascript"></script> 
+		<script src="{% static "MeaningBeeApp/js/userDefintions.js" %}" type="text/javascript"></script> 
+   
 	</body>
 </html>
