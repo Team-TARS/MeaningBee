@@ -1,5 +1,6 @@
 from MeaningBeeApp.views import LoginView
 from MeaningBeeApp.views import RedirectView
 from MeaningBeeApp.views import RegisterView
+from MeaningBeeApp.views import LogoutView
 
-__all__ = ['LoginView','RedirectView','RegisterView']
+__all__ = ['LoginView','RedirectView','RegisterView','LogoutView']

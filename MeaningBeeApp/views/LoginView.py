@@ -28,6 +28,8 @@ def login_action(request):
             print user
             if user is not None:                                         
                 response_data['result'] = 'success'
+                login(request, user)
+                print "user is %s",user
     print json.dumps(response_data)
     return HttpResponse(
         json.dumps(response_data),
