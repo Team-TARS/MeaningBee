@@ -86,7 +86,6 @@ function fetchWord() {
 					   if (sec == -1) {
 					   	  finalUserDefinitions = getUserDefinitions();
 					   	  console.log(finalUserDefinitions);
-					      //$('#hideMsg').fadeOut('fast');
 					      $('#continue').fadeOut('fast');
 					      clearInterval(timer);
 					      //TODO - change this url
