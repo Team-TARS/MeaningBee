@@ -117,10 +117,59 @@ function getUserDefinitions() {
 	return result;
 }
 
+function sendWords(userDefinitions) {
+
+	var csrftoken = getCookie('csrftoken');
+	var ajaxData = {csrfmiddlewaretoken: csrftoken, userDefinition : userDefinitions};
+
+	function csrfSafeMethod(method) {
+	    // these HTTP methods do not require CSRF protection
+	    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+	}
+	
+	$.ajaxSetup({
+	    beforeSend: function(xhr, settings) {
+	        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+	            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+	        }
+	    }
+	}); // to check if the csrf token is set - django 1.7 doc
+
+	$.ajax({
+	        url : "/write_user_definition/", // the endpoint
+	        headers: { 'Content-Type': 'application/json'},
+	        type : "POST", // http method
+	        dataType:"json",
+	        data : JSON.stringify(ajaxData), // data sent with the post request
+	
+	        // handle a successful response
+	        success : function(json) {
+	            console.log(json); // log the returned json to the console
+	            console.log("success"); // another sanity check
+	            if(json['result']==='success') {
+	            	//TODO
+	            	alert("TODO - Redirect to next page.");
+	            }
+	            else {
+	            	//TODO - handle this error or keep polling
+	            	alert("Oops, something went wrong");
+	            }
+	        },
+	        // handle a non-successful response
+	        error : function(xhr,errmsg,err) {
+	            console.log("Error.");
+	            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+	        }
+	});	
+
+}
 
 /*Collecting the final set of user definitions when user clicks continue*/
 $("#continue").on("click", function(){
     finalUserDefinitions = getUserDefinitions();
     console.log(finalUserDefinitions);
+    sendWords(finalUserDefinitions);
+
+
 });
 

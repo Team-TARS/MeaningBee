@@ -13,25 +13,20 @@ import time
 from datetime import datetime
 from MeaningBeeApp.models import Word,WordMeaning
 from random import randint
-from django.contrib.auth.decorators import login_required
-
+from MeaningBeeApp.decorators import my_login_required
 
 # View to fetch a random word and provide it to the player
 
+@my_login_required
 @csrf_exempt
-def fetch_random_word(request):
+def write_definitions(request):
 	response_data = {}
 	response_data['result'] = 'fail'
-	print "user is %s",request.user
 	if request.method == 'POST' and request.is_ajax():
 		received_json_data=json.loads(request.body)
-		num_words = Word.objects.count()
-		randomNumber = randint(1,num_words)
-		fetched = Word.objects.get(pk=randomNumber)
-		randomWord = fetched.word
-		# TODO - INSERT GAME INFORMATION INTO OTHER DB
-		response_data['word']=randomWord
-		response_data['result']='success'
+		print received_json_data['userDefinition']
+		# TODO - INSERT INTO OTHER DBS
+		response_data['result'] = 'success'
 	return HttpResponse(
 		json.dumps(response_data),
 		content_type="application/json"

@@ -5,13 +5,14 @@ from MeaningBeeApp.views import RedirectView
 from MeaningBeeApp.views import RegisterView
 from MeaningBeeApp.views import FetchWordView
 from MeaningBeeApp.views import LogoutView
-
+from MeaningBeeApp.views import WriteUserDefinitionsView
 
 urlpatterns = patterns('',
      url(r'^$', RedirectView.index, name='index'),
      url(r'^login/', RedirectView.login, name='login'),
      #url(r'^invalid_login/', RedirectView.invalid_login, name='invalid_login'),
      # url(r'^create_post/', views.create_post, name='create_post'),
+     url(r'^write_user_definition/', WriteUserDefinitionsView.write_definitions, name='write_user_definition'),
      url(r'^login_action/', LoginView.login_action, name='login'),
      url(r'^logout/', LogoutView.logout_action, name='logout'),
      url(r'^register_action/', RegisterView.register_action, name='register'),
